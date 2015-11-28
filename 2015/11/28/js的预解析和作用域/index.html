@@ -5,37 +5,16 @@
   
   <title>js的预解析和作用域 | 无限挑战</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在js执行中，浏览器的准备工作分为两部：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。
-var k = &quot;10&quot;;
-var c = function(){};
-浏览器的解析之前的工作是怎样的？看看下面的：
-var k,c;
-k = &quot;10&quot;;
-c = function(){};
-刚刚提到了作用域，可能有人会问什么是作用域，其实js中的作用域就两种：全局作用域和局部作用域。">
+  <meta name="description" content="在js执行中，浏览器的准备工作分为两部：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js的预解析和作用域">
 <meta property="og:url" content="http://yoursite.com/2015/11/28/js的预解析和作用域/index.html">
 <meta property="og:site_name" content="无限挑战">
-<meta property="og:description" content="在js执行中，浏览器的准备工作分为两部：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。
-var k = &quot;10&quot;;
-var c = function(){};
-浏览器的解析之前的工作是怎样的？看看下面的：
-var k,c;
-k = &quot;10&quot;;
-c = function(){};
-刚刚提到了作用域，可能有人会问什么是作用域，其实js中的作用域就两种：全局作用域和局部作用域。">
-<meta property="og:updated_time" content="2015-11-28T06:12:36.000Z">
+<meta property="og:description" content="在js执行中，浏览器的准备工作分为两部：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
+<meta property="og:updated_time" content="2015-11-28T06:31:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js的预解析和作用域">
-<meta name="twitter:description" content="在js执行中，浏览器的准备工作分为两部：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。
-var k = &quot;10&quot;;
-var c = function(){};
-浏览器的解析之前的工作是怎样的？看看下面的：
-var k,c;
-k = &quot;10&quot;;
-c = function(){};
-刚刚提到了作用域，可能有人会问什么是作用域，其实js中的作用域就两种：全局作用域和局部作用域。">
+<meta name="twitter:description" content="在js执行中，浏览器的准备工作分为两部：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
   
     <link rel="alternative" href="/atom.xml" title="无限挑战" type="application/atom+xml">
   
@@ -268,7 +247,7 @@ c = function(){};
   
     <div class="article-meta">
       <a href="/2015/11/28/js的预解析和作用域/" class="article-date">
-  	<time datetime="2015-11-28T06:12:36.000Z" itemprop="datePublished">2015-11-28</time>
+  	<time datetime="2015-11-28T06:31:49.000Z" itemprop="datePublished">2015-11-28</time>
 </a>
     </div>
   
@@ -297,7 +276,7 @@ c = function(){};
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在js执行中，浏览器的准备工作分为两部：<br>第一：把变量、函数表达式的声明提升到当前作用域的顶端。<br>第二：把函数赋值。</p>
+        <p>在js执行中，浏览器的准备工作分为两部：<br>第一：把变量、函数表达式的声明提升到当前作用域的顶端。<br>第二：把函数赋值。<br><a id="more"></a></p>
 <pre><code><span class="keyword">var</span> k = <span class="string">"10"</span>;
 <span class="keyword">var</span> c = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{};
 </code></pre><p>浏览器的解析之前的工作是怎样的？看看下面的：</p>
@@ -363,11 +342,15 @@ compute(<span class="number">500</span>,<span class="number">2</span>,<span clas
     
 <nav id="article-nav">
   
-  
-    <a href="/2015/11/26/清除浮动的方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS清除浮动的方法</div>
-      <strong class="article-nav-caption">></strong>
+    <a href="/2015/11/28/清除浮动的方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          CSS清除浮动的方法
+        
+      </div>
     </a>
+  
   
 </nav>
 
