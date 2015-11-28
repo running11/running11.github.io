@@ -5,16 +5,16 @@
   
   <title>js的预解析和作用域 | 无限挑战</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在js执行中，js的准备工作首先有两点：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
+  <meta name="description" content="在js执行中，js解析的准备工作首先有两点：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js的预解析和作用域">
 <meta property="og:url" content="http://yoursite.com/2015/11/28/js的预解析和作用域/index.html">
 <meta property="og:site_name" content="无限挑战">
-<meta property="og:description" content="在js执行中，js的准备工作首先有两点：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
-<meta property="og:updated_time" content="2015-11-28T13:34:02.000Z">
+<meta property="og:description" content="在js执行中，js解析的准备工作首先有两点：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
+<meta property="og:updated_time" content="2015-11-28T13:34:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js的预解析和作用域">
-<meta name="twitter:description" content="在js执行中，js的准备工作首先有两点：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
+<meta name="twitter:description" content="在js执行中，js解析的准备工作首先有两点：第一：把变量、函数表达式的声明提升到当前作用域的顶端。第二：把函数赋值。">
   
     <link rel="alternative" href="/atom.xml" title="无限挑战" type="application/atom+xml">
   
@@ -247,7 +247,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/28/js的预解析和作用域/" class="article-date">
-  	<time datetime="2015-11-28T13:34:02.000Z" itemprop="datePublished">2015-11-28</time>
+  	<time datetime="2015-11-28T13:34:55.000Z" itemprop="datePublished">2015-11-28</time>
 </a>
     </div>
   
@@ -276,7 +276,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在js执行中，js的准备工作首先有两点：<br>第一：把变量、函数表达式的声明提升到当前作用域的顶端。<br>第二：把函数赋值。<br><a id="more"></a></p>
+        <p>在js执行中，js解析的准备工作首先有两点：<br>第一：把变量、函数表达式的声明提升到当前作用域的顶端。<br>第二：把函数赋值。<br><a id="more"></a></p>
 <pre><code><span class="keyword">var</span> k = <span class="string">"10"</span>;
 <span class="keyword">var</span> c = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{};
 </code></pre><p>浏览器的解析之前的工作是怎样的？看看下面的：</p>
