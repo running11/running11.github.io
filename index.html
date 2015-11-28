@@ -244,6 +244,113 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-js的预解析和作用域" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/28/js的预解析和作用域/" class="article-date">
+  	<time datetime="2015-11-28T03:12:51.000Z" itemprop="datePublished">2015-11-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/28/js的预解析和作用域/">js的预解析和作用域</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在js执行中，浏览器的准备工作分为两部：<br>第一：把变量、函数表达式的声明提升到当前作用域的顶端。<br>第二：把函数赋值。</p>
+<pre><code><span class="keyword">var</span> k = <span class="string">"10"</span>;
+<span class="keyword">var</span> c = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{};
+</code></pre><p>浏览器的解析之前的工作是怎样的？看看下面的：</p>
+<pre><code><span class="keyword">var</span> k,c;
+k = <span class="string">"10"</span>;
+c = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{};
+</code></pre><p>刚刚提到了作用域，可能有人会问什么是作用域，其实js中的作用域就两种：全局作用域和局部作用域。了解作用域之前，我们得知道什么是全局变量和局部变量。</p>
+<p>全局变量的声明不用var关键字，直接声明。</p>
+<p>局部变量就是在函数内部的声明。</p>
+<p>全局作用域就是指在整个应该程序中都是可用的。</p>
+<p>局部作用域就是指函数内部声明的变量或函数。</p>
+<h4 id="下面来介绍下函数的三种类型：">下面来介绍下函数的三种类型：</h4><p>1、函数表达式：是使用function关键字，没有函数名，赋值给一个变量的函数。</p>
+<pre><code><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>{
+}
+</code></pre><p>2、声明函数：也叫函数声明，是使用function关键字+函数名声明的函数。</p>
+<pre><code><span class="function"><span class="keyword">function</span> <span class="title">fn</span><span class="params">()</span><span class="comment">{
+}</span>
+<span class="title">fn</span><span class="params">()</span>;</span>
+</code></pre><p>3、匿名函数：是使用function关键字但是没有函数名的函数。</p>
+<pre><code><span class="list">(<span class="keyword">function</span><span class="list">(<span class="keyword">i</span>)</span><span class="collection">{
+    console.log<span class="list">(<span class="keyword">i</span>)</span>
+}</span>)</span><span class="list">(<span class="number">2</span>)</span>
+</code></pre><p>()();这里的第一个（）把匿名函数定义成函数表达式，第二个（）表示立即执行。</p>
+<h5 id="随堂练习：">随堂练习：</h5><pre><code><span class="function">function <span class="title">compute</span><span class="params">()</span></span>{
+    var count = arguments[arguments.length-<span class="number">1</span>];
+    <span class="keyword">if</span>(count ==<span class="string">"+"</span>){
+        <span class="keyword">for</span>(var i = <span class="number">1</span>;i &lt;arguments.length-<span class="number">1</span>;i++){
+            arguments[<span class="number">0</span>] = arguments[<span class="number">0</span>]+arguments[i];
+        }
+        <span class="comment">//console.log(arguments[0]); 可以打印出来，看下效果</span>
+    }
+    <span class="keyword">else</span> <span class="keyword">if</span>(count ==<span class="string">"-"</span>){
+        <span class="keyword">for</span>(var i = <span class="number">1</span>;i &lt;arguments.length-<span class="number">1</span>;i++){
+            arguments[<span class="number">0</span>] = arguments[<span class="number">0</span>]-argument[i];
+        }
+        <span class="comment">//console.log(arguments[0]); 可以打印出来，看下效果</span>
+    }
+    <span class="keyword">else</span> <span class="keyword">if</span>(count ==<span class="string">"*"</span>){
+        <span class="keyword">for</span>(var i = <span class="number">1</span>; i &lt;arguments.length-<span class="number">1</span>;i++){
+            arguments[<span class="number">0</span>] = arguments[<span class="number">0</span>]*argument[i];
+        }
+        <span class="comment">//console.log(arguments[0]); 可以打印出来，看下效果</span>
+    }
+    <span class="keyword">else</span> <span class="keyword">if</span>(count ==<span class="string">"/"</span>){
+        <span class="keyword">for</span>(var i = <span class="number">0</span>;i &lt;arguments.length;i++){
+            argument[<span class="number">0</span>] = argument[<span class="number">0</span>]/arguments[i];
+        }
+        <span class="comment">//console.log(arguments[0]); 可以打印出来，看下效果</span>
+    }
+}
+
+compute(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">"+"</span>);
+compute(<span class="number">10</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="string">"-"</span>);
+compute(<span class="number">6</span>,<span class="number">10</span>,<span class="number">3</span>,<span class="string">"*"</span>);
+compute(<span class="number">500</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="string">"/"</span>);
+</code></pre><p>本人原创，如有雷同，纯属虚构。如有错误，麻烦赶紧联系本人，在此谢过！！！！</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-清除浮动的方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
