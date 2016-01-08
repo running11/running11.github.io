@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>无限挑战</title>
+  <title>javascript的数组操作 | 无限挑战</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="记录学习前端的点点滴滴">
-<meta property="og:type" content="website">
-<meta property="og:title" content="无限挑战">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1、jion():用于把数组中所有元素放入一个字符串。
+var arr=[1,2,3,4,5];
+
+console.log(arr.join(&quot;,&quot;)); //1,2,3,4,5
+
+console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript的数组操作">
+<meta property="og:url" content="http://yoursite.com/2016/01/06/javascript的数组操作方法/index.html">
 <meta property="og:site_name" content="无限挑战">
-<meta property="og:description" content="记录学习前端的点点滴滴">
+<meta property="og:description" content="1、jion():用于把数组中所有元素放入一个字符串。
+var arr=[1,2,3,4,5];
+
+console.log(arr.join(&quot;,&quot;)); //1,2,3,4,5
+
+console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
+<meta property="og:updated_time" content="2016-01-08T11:48:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无限挑战">
-<meta name="twitter:description" content="记录学习前端的点点滴滴">
+<meta name="twitter:title" content="javascript的数组操作">
+<meta name="twitter:description" content="1、jion():用于把数组中所有元素放入一个字符串。
+var arr=[1,2,3,4,5];
+
+console.log(arr.join(&quot;,&quot;)); //1,2,3,4,5
+
+console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
   
     <link rel="alternative" href="/atom.xml" title="无限挑战" type="application/atom+xml">
   
@@ -242,9 +258,7 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-javascript的数组操作方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-javascript的数组操作方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/01/06/javascript的数组操作方法/" class="article-date">
@@ -260,12 +274,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/06/javascript的数组操作方法/">javascript的数组操作</a>
+    <h1 class="article-title" itemprop="name">
+      javascript的数组操作
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -276,252 +297,117 @@
 console.<span class="built_in">log</span>(arr.join(<span class="string">","</span>)); <span class="comment">//1,2,3,4,5</span>
 
 console.<span class="built_in">log</span>(arr.join(<span class="string">"|"</span>));  <span class="comment">//1|2|3|4|5</span>
+</code></pre><a id="more"></a>
+<p>2、pop():移除数组中的最后一个元素并返回移除的元素。</p>
+<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
+
+console.<span class="built_in">log</span>(arr.pop());  <span class="comment">//5</span>
+</code></pre><p>3、shift():移除数组中的第一个元素并返回该元素。</p>
+<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
+
+console.<span class="built_in">log</span>(arr.shift());  <span class="comment">//1</span>
+</code></pre><p>4、push():向数组的末尾添加一个或多个元素，并返回新数组的长度。</p>
+<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
+
+console.<span class="built_in">log</span>(arr.push(<span class="number">6</span>,<span class="number">7</span>));<span class="comment">//7</span>
+</code></pre><p>5、sort():用于对数组的元素进行排序。</p>
+<pre><code>var values=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>];
+
+console.<span class="built_in">log</span>(values.sort());  <span class="comment">//[0, 1, 10, 15, 5]</span>
+</code></pre><p>上面的代码没有按照数值的大小对数字进行排序，要实现这一点，就必须使用一个排序函数：</p>
+<p>function sortNumber(a,b){</p>
+<pre><code><span class="keyword">return</span> <span class="literal">a</span>-b<span class="comment">;</span>
+</code></pre><p>}</p>
+<p>console.log(values.sort(sortNumber));  //[0, 1, 5, 10, 15]</p>
+<p>5、slice()：该方法可从指定数组中返回指定元素。原数组不会改变。两个参数时遵循左闭右开原则。</p>
+<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
+
+console.<span class="built_in">log</span>(arr.slice(<span class="number">1</span>,<span class="number">3</span>));  <span class="comment">//[1, 2]</span>
+
+console.<span class="built_in">log</span>(arr.slice(<span class="number">2</span>));  <span class="comment">//[2, 3, 4, 5, 6, 7, 8]</span>
+</code></pre><p>6、splice():用于可以对数组的删除，替换，插入，返回被删除的元素。原数组发生改变。</p>
+<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
+
+console.<span class="built_in">log</span>(arr.splice(<span class="number">1</span>,<span class="number">3</span>));   <span class="comment">//[1, 2, 3] [0, 4, 5, 6, 7, 8]</span>
+
+console.<span class="built_in">log</span>(arr.splice(<span class="number">1</span>,<span class="number">3</span>,<span class="string">"aa"</span>),arr);<span class="comment">//[4, 5, 6] [0, "aa", 7, 8]</span>
+</code></pre><p>注：当splice两个参数时，第一个表示删除的位置，第二个表示删除的个数;当splice三个参数时，第一个表示删除的位置，第二个表示删除的个数，第三个指增加的元素。</p>
+<p>7、forEach遍历数组</p>
+<pre><code>var arr = [<span class="comment">"a"</span>,<span class="comment">"b"</span>,<span class="number">2</span>,<span class="keyword">true</span>,{},<span class="number">5</span>,<span class="number">6</span>];
+
+arr.forEach(function(value,index,arr){
+
+    console.log(value,index,arr);
+    //a <span class="number">0</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
+    //b <span class="number">1</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
+    //<span class="number">2</span> <span class="number">2</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
+    //<span class="keyword">true</span> <span class="number">3</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
+    //<span class="class">Object</span> {} <span class="number">4</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
+    //<span class="number">5</span> <span class="number">5</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
+    //<span class="number">6</span> <span class="number">6</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
+    &lt;!--第一个参数代表的是下标对应的元素，第二个参数代表的是下标，第三个参数代表的是数组本身--&gt;
+
+})
 </code></pre>
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/06/javascript的数组操作方法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/01/06/Javascript的字符串操作方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Javascript的字符串的操作方法</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="javascript的数组操作方法" data-title="javascript的数组操作" data-url="http://yoursite.com/2016/01/06/javascript的数组操作方法/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-  
-    <article id="post-Javascript的字符串操作方法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/06/Javascript的字符串操作方法/" class="article-date">
-  	<time datetime="2016-01-06T03:48:22.000Z" itemprop="datePublished">2016-01-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/06/Javascript的字符串操作方法/">Javascript的字符串的操作方法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、indexOf()：从数组的开头(位置0)开始向后查找。lastIndexOf():从数组的末尾开始向前查找。这两个方法都返回的是要查找的项在数组中的位置下标值,在没有找到的情况下返回的是-1。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/06/Javascript的字符串操作方法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-js的预解析和作用域" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/28/js的预解析和作用域/" class="article-date">
-  	<time datetime="2015-11-28T13:34:55.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/js的预解析和作用域/">js的预解析和作用域</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在js执行中，js解析的准备工作首先有两点：<br>第一：把变量、函数表达式的声明提升到当前作用域的顶端。<br>第二：把函数赋值。<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/28/js的预解析和作用域/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-HTML块级标签、行级标签的区别" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/28/HTML块级标签、行级标签的区别/" class="article-date">
-  	<time datetime="2015-11-28T06:33:34.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/HTML块级标签、行级标签的区别/">HTML块级标签、行级标签的区别</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>块级标签：<br>1、常见的元素：div、p、form、ul、ol、h1-h6</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/28/HTML块级标签、行级标签的区别/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-清除浮动的方法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/28/清除浮动的方法/" class="article-date">
-  	<time datetime="2015-11-28T06:33:01.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/28/清除浮动的方法/">CSS清除浮动的方法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>用例子来说明下：</p>
-<p>这个是未清除浮动的源代码，注意到父级元素box没有展开。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/28/清除浮动的方法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -545,8 +431,8 @@ console.<span class="built_in">log</span>(arr.join(<span class="string">"|"</spa
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
