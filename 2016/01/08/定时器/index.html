@@ -3,33 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript的数组操作方法 | 无限挑战</title>
+  <title>定时器 | 无限挑战</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、jion():用于把数组中所有元素放入一个字符串。
-var arr=[1,2,3,4,5];
-
-console.log(arr.join(&quot;,&quot;)); //1,2,3,4,5
-
-console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
+  <meta name="description" content="定时器总共分为两种：setInterval()循环定时器和setTimeout()单次定时器。
+1、setInterval()方法是按照间隔的时间(以毫秒计算)不停地执行指定代码。setInterval()通常有两个参数，第一个参数指要执行的函">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript的数组操作方法">
-<meta property="og:url" content="http://yoursite.com/2016/01/06/javascript的数组操作方法/index.html">
+<meta property="og:title" content="定时器">
+<meta property="og:url" content="http://yoursite.com/2016/01/08/定时器/index.html">
 <meta property="og:site_name" content="无限挑战">
-<meta property="og:description" content="1、jion():用于把数组中所有元素放入一个字符串。
-var arr=[1,2,3,4,5];
-
-console.log(arr.join(&quot;,&quot;)); //1,2,3,4,5
-
-console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
-<meta property="og:updated_time" content="2016-01-08T11:52:11.000Z">
+<meta property="og:description" content="定时器总共分为两种：setInterval()循环定时器和setTimeout()单次定时器。
+1、setInterval()方法是按照间隔的时间(以毫秒计算)不停地执行指定代码。setInterval()通常有两个参数，第一个参数指要执行的函">
+<meta property="og:updated_time" content="2016-01-11T11:51:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript的数组操作方法">
-<meta name="twitter:description" content="1、jion():用于把数组中所有元素放入一个字符串。
-var arr=[1,2,3,4,5];
-
-console.log(arr.join(&quot;,&quot;)); //1,2,3,4,5
-
-console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
+<meta name="twitter:title" content="定时器">
+<meta name="twitter:description" content="定时器总共分为两种：setInterval()循环定时器和setTimeout()单次定时器。
+1、setInterval()方法是按照间隔的时间(以毫秒计算)不停地执行指定代码。setInterval()通常有两个参数，第一个参数指要执行的函">
   
     <link rel="alternative" href="/atom.xml" title="无限挑战" type="application/atom+xml">
   
@@ -258,11 +246,11 @@ console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-javascript的数组操作方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-定时器" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/06/javascript的数组操作方法/" class="article-date">
-  	<time datetime="2016-01-06T11:59:57.000Z" itemprop="datePublished">2016-01-06</time>
+      <a href="/2016/01/08/定时器/" class="article-date">
+  	<time datetime="2016-01-08T12:09:51.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -275,7 +263,7 @@ console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
         
   
     <h1 class="article-title" itemprop="name">
-      javascript的数组操作方法
+      定时器
     </h1>
   
 
@@ -291,64 +279,28 @@ console.log(arr.join(&quot;|&quot;));  //1|2|3|4|5">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、jion():用于把数组中所有元素放入一个字符串。</p>
-<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
+        <p>定时器总共分为两种：setInterval()循环定时器和setTimeout()单次定时器。</p>
+<p>1、setInterval()方法是按照间隔的时间(以毫秒计算)不停地执行指定代码。setInterval()通常有两个参数，第一个参数指要执行的函<br><a id="more"></a><br>数，第二个参数指间隔时间。setInterval()函数会间隔一段时间重复时间代码，只有在clearInterval()函数将其停止，或者页面被关闭也会自动停止。</p>
+<pre><code> <span class="function"><span class="keyword">function</span> <span class="title">funone</span><span class="params">()</span> </span>{
+          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>{
+            alert(<span class="string">"欢迎使用setInterval"</span>);
+          }
+      }
+setInterval(funone(), <span class="number">1000</span>);<span class="comment">//每隔1秒就会弹出提示信</span>
+息“欢迎使用setInterval”，一直执行。
+</code></pre><p>setInterval()的第一个参数看作参数为函数名或函数的引用。</p>
+<pre><code>setInterval<span class="list">(<span class="keyword">function</span> <span class="list">()</span> {
 
-console.<span class="built_in">log</span>(arr.join(<span class="string">","</span>)); <span class="comment">//1,2,3,4,5</span>
+            alert<span class="list">(<span class="string">"我一秒中执行一次"</span>)</span><span class="comment">;</span>
+        }, <span class="number">1000</span>)</span>
+</code></pre><p>clearInterval()清除指定的setInterval函数将要执行的代码。<br>比如：第一个函数清除定时器</p>
+<p>var id=setInterval(funone(), 1000);</p>
+<p>清除时是：clearInterval(id);</p>
+<p>2、setTimeout()方法用于在指定的毫秒数后执行指定的代码。setTimeout()通常有两个参数，第一个参数指要执行的函数，第二个参数指间隔时间。setTimeout()函数会间隔一定时间后执行一次，可以用clearTimeout()函数将其停止，或者页面被关闭也会自动停止。</p>
+<p>var t=setTimeout(“alert(123)”,2000);</p>
+<p>清除setTimeout()，用clearTimeout(),跟setInterval()用法是一样的。</p>
+<p>clearTimeout(t);</p>
 
-console.<span class="built_in">log</span>(arr.join(<span class="string">"|"</span>));  <span class="comment">//1|2|3|4|5</span>
-</code></pre><a id="more"></a>
-<p>2、pop():移除数组中的最后一个元素并返回移除的元素。</p>
-<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
-
-console.<span class="built_in">log</span>(arr.pop());  <span class="comment">//5</span>
-</code></pre><p>3、shift():移除数组中的第一个元素并返回该元素。</p>
-<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
-
-console.<span class="built_in">log</span>(arr.shift());  <span class="comment">//1</span>
-</code></pre><p>4、push():向数组的末尾添加一个或多个元素，并返回新数组的长度。</p>
-<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
-
-console.<span class="built_in">log</span>(arr.push(<span class="number">6</span>,<span class="number">7</span>));<span class="comment">//7</span>
-</code></pre><p>5、sort():用于对数组的元素进行排序。</p>
-<pre><code>var values=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>];
-
-console.<span class="built_in">log</span>(values.sort());  <span class="comment">//[0, 1, 10, 15, 5]</span>
-</code></pre><p>上面的代码没有按照数值的大小对数字进行排序，要实现这一点，就必须使用一个排序函数：</p>
-<p>function sortNumber(a,b){</p>
-<pre><code><span class="keyword">return</span> <span class="literal">a</span>-b<span class="comment">;</span>
-</code></pre><p>}</p>
-<p>console.log(values.sort(sortNumber));  //[0, 1, 5, 10, 15]</p>
-<p>5、slice()：该方法可从指定数组中返回指定元素。原数组不会改变。两个参数时遵循左闭右开原则。</p>
-<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
-
-console.<span class="built_in">log</span>(arr.slice(<span class="number">1</span>,<span class="number">3</span>));  <span class="comment">//[1, 2]</span>
-
-console.<span class="built_in">log</span>(arr.slice(<span class="number">2</span>));  <span class="comment">//[2, 3, 4, 5, 6, 7, 8]</span>
-</code></pre><p>6、splice():用于可以对数组的删除，替换，插入，返回被删除的元素。原数组发生改变。</p>
-<pre><code>var arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];
-
-console.<span class="built_in">log</span>(arr.splice(<span class="number">1</span>,<span class="number">3</span>));   <span class="comment">//[1, 2, 3] [0, 4, 5, 6, 7, 8]</span>
-
-console.<span class="built_in">log</span>(arr.splice(<span class="number">1</span>,<span class="number">3</span>,<span class="string">"aa"</span>),arr);<span class="comment">//[4, 5, 6] [0, "aa", 7, 8]</span>
-</code></pre><p>注：当splice两个参数时，第一个表示删除的位置，第二个表示删除的个数;当splice三个参数时，第一个表示删除的位置，第二个表示删除的个数，第三个指增加的元素。</p>
-<p>7、forEach遍历数组</p>
-<pre><code>var arr = [<span class="comment">"a"</span>,<span class="comment">"b"</span>,<span class="number">2</span>,<span class="keyword">true</span>,{},<span class="number">5</span>,<span class="number">6</span>];
-
-arr.forEach(function(value,index,arr){
-
-    console.log(value,index,arr);
-    //a <span class="number">0</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
-    //b <span class="number">1</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
-    //<span class="number">2</span> <span class="number">2</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
-    //<span class="keyword">true</span> <span class="number">3</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
-    //<span class="class">Object</span> {} <span class="number">4</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
-    //<span class="number">5</span> <span class="number">5</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
-    //<span class="number">6</span> <span class="number">6</span> [<span class="comment">"a"</span>, <span class="comment">"b"</span>, <span class="number">2</span>, <span class="keyword">true</span>, <span class="class">Object</span>, <span class="number">5</span>, <span class="number">6</span>]
-    &lt;!--第一个参数代表的是下标对应的元素，第二个参数代表的是下标，第三个参数代表的是数组本身--&gt;
-
-})
-</code></pre>
       
     </div>
     
@@ -357,18 +309,9 @@ arr.forEach(function(value,index,arr){
     
 <nav id="article-nav">
   
-    <a href="/2016/01/08/定时器/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          定时器
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/06/Javascript的字符串操作方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Javascript的字符串的操作方法</div>
+    <a href="/2016/01/06/javascript的数组操作方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript的数组操作方法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -397,7 +340,7 @@ arr.forEach(function(value,index,arr){
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="javascript的数组操作方法" data-title="javascript的数组操作方法" data-url="http://yoursite.com/2016/01/06/javascript的数组操作方法/"></div>
+	<div class="ds-thread" data-thread-key="定时器" data-title="定时器" data-url="http://yoursite.com/2016/01/08/定时器/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
