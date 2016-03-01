@@ -6,24 +6,21 @@
   <title>无限挑战</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="this是javascript语言的一个关键字，写代码时会经常用，所以好好理解this,再运用，可以避免走进坑。下面是一些我个人的一些小小的见解，如有错误，欢迎指正!
-1、在全局作用域下调用this,this指向windowconsole.log(this);//window
-在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。
-2、函数被直接调用this,this指向w">
+1、在全局作用域下调用this，this指向windowconsole.log(this);//window
+在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="无限挑战">
 <meta property="og:url" content="http://yoursite.com/2016/03/01/javascript中的this/index.html">
 <meta property="og:site_name" content="无限挑战">
 <meta property="og:description" content="this是javascript语言的一个关键字，写代码时会经常用，所以好好理解this,再运用，可以避免走进坑。下面是一些我个人的一些小小的见解，如有错误，欢迎指正!
-1、在全局作用域下调用this,this指向windowconsole.log(this);//window
-在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。
-2、函数被直接调用this,this指向w">
-<meta property="og:updated_time" content="2016-03-01T12:02:04.000Z">
+1、在全局作用域下调用this，this指向windowconsole.log(this);//window
+在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。">
+<meta property="og:updated_time" content="2016-03-01T12:07:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="无限挑战">
 <meta name="twitter:description" content="this是javascript语言的一个关键字，写代码时会经常用，所以好好理解this,再运用，可以避免走进坑。下面是一些我个人的一些小小的见解，如有错误，欢迎指正!
-1、在全局作用域下调用this,this指向windowconsole.log(this);//window
-在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。
-2、函数被直接调用this,this指向w">
+1、在全局作用域下调用this，this指向windowconsole.log(this);//window
+在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。">
   
     <link rel="alternative" href="/atom.xml" title="无限挑战" type="application/atom+xml">
   
@@ -268,9 +265,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>this是javascript语言的一个关键字，写代码时会经常用，所以好好理解this,再运用，可以避免走进坑。下面是一些我个人的一些小小的见解，如有错误，欢迎指正!</p>
-<h4 id="1、在全局作用域下调用this,this指向window"><strong>1、在全局作用域下调用this,this指向window</strong></h4><pre><code><span class="built_in">console</span>.log(<span class="keyword">this</span>);<span class="regexp">//</span><span class="built_in">window</span>
-</code></pre><p>在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。</p>
-<h4 id="2、函数被直接调用this,this指向window"><strong>2、函数被直接调用this,this指向window</strong></h4><pre><code><span class="keyword">var</span> x = <span class="number">1</span>;
+<h4 id="1、在全局作用域下调用this，this指向window"><strong>1、在全局作用域下调用this，this指向window</strong></h4><pre><code><span class="built_in">console</span>.log(<span class="keyword">this</span>);<span class="regexp">//</span><span class="built_in">window</span>
+</code></pre><p>在浏览器中执行上面的代码，打印出来的是一个window对象，这是一个全局对象。<br><a id="more"></a></p>
+<h4 id="2、函数被直接调用this，this指向window"><strong>2、函数被直接调用this，this指向window</strong></h4><pre><code><span class="keyword">var</span> x = <span class="number">1</span>;
 <span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>)</span>{
     <span class="built_in">console</span>.log(<span class="keyword">this</span>.x); <span class="comment">// 1</span>
 }
